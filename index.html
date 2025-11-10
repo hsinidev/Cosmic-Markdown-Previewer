@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Markdown Previewer - Real-Time MD to HTML</title>
+    <meta name="description" content="A feature-rich, real-time Markdown previewer with a beautiful animated cosmic background. Convert your Markdown to clean HTML instantly. Perfect for developers, writers, and content creators.">
+    <meta name="keywords" content="markdown, previewer, real-time, markdown to html, developer tools, react, tailwindcss, cosmic theme, live editor">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        @keyframes pan-background {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        .cosmic-background {
+            background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop');
+            background-size: 200% 200%;
+            animation: pan-background 180s ease-in-out infinite alternate;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+        }
+        .prose-dark {
+          color: #d1d5db;
+        }
+        .prose-dark h1, .prose-dark h2, .prose-dark h3, .prose-dark h4, .prose-dark h5, .prose-dark h6 {
+          color: #ffffff;
+        }
+        .prose-dark a {
+          color: #93c5fd;
+        }
+        .prose-dark strong {
+          color: #f3f4f6;
+        }
+        .prose-dark blockquote {
+          color: #d1d5db;
+          border-left-color: #6b7280;
+        }
+        .prose-dark code {
+          color: #f9fafb;
+          background-color: rgba(255,255,255,0.1);
+          padding: 2px 4px;
+          border-radius: 4px;
+        }
+        .prose-dark pre {
+           background-color: #1f2937;
+           color: #d1d5db;
+        }
+        .prose-dark table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .prose-dark th, .prose-dark td {
+            border: 1px solid #4b5563;
+            padding: 8px;
+        }
+        .prose-dark th {
+            background-color: #374151;
+            color: #ffffff;
+        }
+        .prose-dark ul > li::before {
+            background-color: #9ca3af;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "url": "https://example.com/",
+          "name": "Cosmic Markdown Previewer",
+          "description": "A modern, real-time Markdown previewer with a stunning animated cosmic theme.",
+          "publisher": {
+            "@type": "Person",
+            "name": "HSINI MOHAMED"
+          }
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Cosmic Markdown Previewer",
+          "operatingSystem": "All",
+          "applicationCategory": "DeveloperApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          },
+          "description": "Instantly render user-inputted Markdown text as styled HTML in a live preview panel.",
+          "browserRequirements": "Requires HTML5 support"
+        },
+        {
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://example.com/#article"
+          },
+          "headline": "The Ultimate Guide to Markdown: From Basics to Best Practices",
+          "description": "An in-depth 3500-word guide covering everything you need to know about Markdown, its benefits in development and blogging, and best practices for creating clean, readable documentation.",
+          "author": {
+            "@type": "Person",
+            "name": "HSINI MOHAMED"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "HSINI MOHAMED"
+          },
+          "datePublished": "2023-10-27",
+          "dateModified": "2023-10-27"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Markdown?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Markdown is a lightweight markup language with plain-text-formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why do developers use Markdown?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Developers use Markdown for its simplicity, readability, and platform independence. It is widely used for writing documentation (like README files), commenting on issues, and writing on technical blogs, as it allows them to format text without leaving the keyboard or using complex editors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Markdown the same as HTML?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, Markdown is not HTML. Markdown's syntax is much simpler and more readable than HTML. However, Markdown processors convert Markdown-formatted text into HTML so it can be displayed in a web browser."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Cosmic Markdown Previewer",
+  "description": "A modern, real-time Markdown previewer with a stunning animated cosmic theme. Instantly render Markdown to styled HTML, with tools to clear input and copy the generated code.",
+  "requestFramePermissions": []
+}
